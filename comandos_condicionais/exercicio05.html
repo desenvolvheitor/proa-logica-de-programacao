@@ -1,0 +1,37 @@
+<!-- Crie um programa em javascript que leia a idade de uma pessoa e informe a sua classe eleitoral:
+    não eleitor (abaixo de 16 anos)
+    eleitor obrigatório (entre a faixa de 18 e menor de 65 anos)
+    eleitor facultativo (de 16 até 18 anos e maior de 65 anos, inclusive)
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <p>Crie um programa em javascript que leia a idade de uma pessoa e informe a sua classe eleitoral:</p>
+
+    <ul>
+        <li>não eleitor (abaixo de 16 anos)</li>
+        <li>eleitor obrigatório (entre a faixa de 18 e menor de 65 anos)</li>
+        <li>eleitor facultativo (de 16 até 18 anos e maior de 65 anos, inclusive)</li>
+    </ul>
+    <hr>
+
+    <script>
+        let idade = parseInt(prompt("Entre com a idade de uma pessoa:"))
+
+        if (idade >= 18 && idade <= 70){
+            document.write("O voto dessa pessoa é obrigatório")
+        } else if (idade >= 16 || idade > 65){
+            document.write("O voto dessa pessoa é facultativo")
+        } else {
+            document.write("Essa pessoa não pode votar")
+        }
+    </script>
+</body>
+</html>

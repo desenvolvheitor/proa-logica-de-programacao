@@ -1,0 +1,64 @@
+    <!-- Escreva um programa que leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova. -->
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 18</title>
+    </head>
+    <body>
+        <h1>Exercício 18</h1>
+        <p>Escreva um programa que leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova.</p>
+        <hr>
+
+        <script>
+            let nome
+            let idade
+            let menor_idade_if = 1000
+            let pessoa_nova_if
+
+            let lista_nomes = []
+            let lista_idades = []
+
+            alert("Atenção: Preencha as informações (nome e idade) de 10 pessoas, e o programa retornará a pessoa mais nova. O resultado pode não ser exato caso hajam 2 ou mais pessoas com idades iguais.")
+
+            for (let i=1;i<=10;i++) {
+                nome = prompt("Digite o nome da " + i + "ª pessoa:")
+                idade = parseInt(prompt("Digite a idade de " + nome + ":"))
+
+                // Versão com if
+                if (idade < menor_idade_if){
+                    menor_idade_if = idade
+                    pessoa_nova_if = nome
+                }
+                
+                // Versão com array
+                lista_nomes.push(nome)
+                lista_idades.push(idade)
+            }
+            
+            // Versão com if
+            document.write("<h3>Versão com If</h3>")
+            if (nome != undefined && idade != 1000){
+                document.write("A pessoa mais nova é " + pessoa_nova_if + " com " + menor_idade_if + " anos.")
+            } else {
+                document.write("Erro! As informações não foram preenchidas corretamente.")
+            }
+            
+            // Versão com dois arrays
+            document.write("<h3>Versão com Array</h3>")
+            let menor_idade_for = Math.min(...lista_idades)
+            let pessoa_nova_for = lista_nomes[lista_idades.indexOf(menor_idade_for)]
+
+            document.write("A pessoa mais nova é " + pessoa_nova_for + " com " + menor_idade_for + " anos.")
+            document.write("<br><br><h3>Fonte dos dados</h3><ol>")
+
+            for(i=0;i<10;i++){
+                document.write("<li>" + lista_nomes[i] + " - " + lista_idades[i] + " anos</li>")
+            }
+
+            document.write("</ol>")
+        </script>
+    </body>
+    </html>

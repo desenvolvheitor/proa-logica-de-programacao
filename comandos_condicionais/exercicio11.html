@@ -1,0 +1,31 @@
+<!-- Escrever um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+    <h1>Exercício 11</h1>
+    <p>Escrever um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês. </p>
+    <hr>
+
+    <style>
+        h3, p{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        let nome = prompt("Digite o nome de um vendedor:")
+        let salario_fixo = parseFloat(prompt("Digite o salário fixo de " + nome + ":"))
+        let total_vendas = parseFloat(prompt("Digite o total de vendas no mês (em dinheiro) realizadas por " + nome + ":"))
+        let salario_final =  salario_fixo + (total_vendas * 0.15)
+
+        document.write("<h3>Nome</h3><br>" + nome + "<br><br><h3>Salário Fixo</h3><br>R$ " + salario_fixo.toFixed(2) + "<br><br><h3>Salário no final do mês</h3><br>R$ " + salario_final.toFixed(2))
+    </script>
+</body>
+</html>

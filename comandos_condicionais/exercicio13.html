@@ -1,0 +1,22 @@
+<!-- Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <h1>Exercício 13</h1>
+    <p>Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.</p>
+    <hr>
+
+    <script>
+        let celsius = parseFloat(prompt("Digite uma temperatura em graus Celsius:"))
+        let fahrenheit = (9*celsius+160)/5
+
+        document.write(celsius + "°C equivale a " + fahrenheit.toFixed(1) + "°F.")
+    </script>
+</body>
+</html>

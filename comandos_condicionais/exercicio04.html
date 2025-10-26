@@ -1,0 +1,30 @@
+<!-- Dados três valores A, B e C, construa um programa em Javascript, que mostre na tela os valores de forma decrescente (do maior para o menor). -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <p>Dados três valores A, B e C, construa um programa em JavaScript, que mostre na tela os valores de forma decrescente (do maior para o menor).</p>
+    <hr>
+
+    <script>
+        let a = parseInt(prompt("Digite o valor inteiro A:"))
+        let b = parseInt(prompt("Digite o valor inteiro B:"))
+        let c = parseInt(prompt("Digite o valor inteiro C:"))
+
+        let vetor = [a, b, c]
+        
+        vetor.sort(function compararNumeros(a, b) {
+            return a - b;
+        })
+
+        document.write(vetor.join(", "))
+    </script>
+    
+</body>
+</html>

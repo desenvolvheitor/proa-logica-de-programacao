@@ -1,0 +1,23 @@
+<!-- Elaborar um programa que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). O programa deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <h1>Exercício 19</h1>
+    <p>Elaborar um programa que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). O programa deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário.</p>
+    <hr>
+
+    <script>
+        let cotacao = parseFloat(prompt("Digite a cotação atual do dólar:"))
+        let valor = parseFloat(prompt("Digite o valor em dólares que você tem disponível:"))
+
+        let valor_convertido = valor*cotacao
+        document.write("O valor que você tem disponível equivale a R$ " + valor_convertido.toFixed(2))
+    </script>
+</body>
+</html>

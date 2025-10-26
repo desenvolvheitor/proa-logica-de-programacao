@@ -1,0 +1,34 @@
+<!-- A CEF concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldo médio no último ano. Fazer um programa em JavaScript que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. Imprimir uma mensagem informando o saldo médio e o valor de crédito. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h1>Exercício 03</h1>
+    <p>A CEF concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldo médio no último ano. Fazer um programa em JavaScript que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. Imprimir uma mensagem informando o saldo médio e o valor de crédito.</p>
+    <img src="imagens/exercicio03.png" width="600px" alt="Tabela de saldo médio e valor de crédito do cliente">
+    <hr>
+
+    <script>
+        let saldo_medio = parseFloat(prompt("Digite o saldo médio do cliente:"))
+        let credito = 0
+
+        if (saldo_medio<0){
+            alert("Erro: O saldo médio não pode ser negativo")
+        } else if (saldo_medio>=501 && saldo_medio<=1000){
+            credito = saldo_medio*0.3
+        } else if (saldo_medio>=1001 && saldo_medio<=3000){
+            credito = saldo_medio*0.4
+        } else if (saldo_medio>3001){
+            credito = saldo_medio*0.5
+        } 
+
+        document.write("O saldo médio do cliente é R$ " + saldo_medio.toFixed(2) + "<br>" + "O valor de crédito dele é R$ " + credito.toFixed(2))
+    </script>
+    
+</body>
+</html>

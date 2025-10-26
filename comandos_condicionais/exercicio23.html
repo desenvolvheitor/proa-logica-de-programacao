@@ -1,0 +1,100 @@
+<!-- Faça um programa que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos estão entre 101 e 200 e quantos são maiores de 200. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23</title>
+</head>
+<body>
+    <h1>Exercício 23</h1>
+    <p>Faça um programa que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos estão entre 101 e 200 e quantos são maiores de 200.</p>
+    <hr>
+
+    <p id="resumo"></p>
+
+    <section>
+        <div class="com_borda">
+            <h3>De 0 a 100</h3>
+            <ul id="cem"></ul>
+        </div>
+        <div class="com_borda">
+            <h3>De 101 a 200</h3>
+            <ul id="duzentos"></ul>
+        </div>
+        <div>
+            <h3>Maior que 200</h3>
+            <ul id="maior_duzentos"></ul>
+        </div>
+    </section>
+
+    <style>
+        section{
+            width: 100%;
+        }
+
+        div{
+            width: 33%;
+            float: left;
+            text-align: center;
+            height: 60vh;
+        }
+        
+        ul{
+            text-align: left;
+        }
+
+        .com_borda{
+            border-right: 1px solid #ccc;
+        }
+    </style>
+
+    <script>
+        let numeros = []
+        let condicao1 = []
+        let condicao2 = []
+        let condicao3 = []
+        let n
+
+        for (let i=1;i<=20;i++) {
+            n = parseInt(prompt("Digite o " + i + "º número inteiro:"))
+            numeros.push(n)
+        }
+
+        for(let i=0;i<numeros.length;i++) {
+            if (numeros[i]>=0&&numeros[i]<=100){
+                condicao1.push(numeros[i])
+            } else if (numeros[i]>=101&&numeros[i]<=200){
+                condicao2.push(numeros[i])
+            } else if (numeros[i]>200){
+                condicao3.push(numeros[i])
+            }
+        }
+        let resumo = document.querySelector("#resumo")
+        let cem = document.querySelector("#cem")
+        let duzentos = document.querySelector("#duzentos")
+        let maior_duzentos = document.querySelector("#maior_duzentos")
+
+        let verbo_cem = condicao1.length == 1 ? 'está' : 'estão';
+        let verbo_duzentos = condicao2.length == 1 ? 'está' : 'estão';
+        let verbo_maior_duzentos = condicao3.length == 1 ? 'é' : 'são';
+        let plural_maior_duzentos = condicao3.length == 1 ? 'maior' : 'maiores';
+
+        resumo.innerHTML = "Dos " + numeros.length + " números, " + condicao1.length + " " + verbo_cem + " entre 0 e 100, " + condicao2.length + " " + verbo_duzentos + " entre 101 e 200, e " + condicao3.length + " " + verbo_maior_duzentos + " " + plural_maior_duzentos +" que 200."
+
+
+        for (let i=0;i<condicao1.length;i++){
+            cem.innerHTML += "<li>" + condicao1[i] + "</li>"
+        }
+
+        for (let i=0;i<condicao2.length;i++){
+            duzentos.innerHTML += "<li>" + condicao2[i] + "</li>"
+        }
+
+        for (let i=0;i<condicao3.length;i++){
+            maior_duzentos.innerHTML += "<li>" + condicao3[i] + "</li>"
+        }
+    </script>
+</body>
+</html>

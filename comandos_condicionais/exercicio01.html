@@ -1,0 +1,94 @@
+<!-- Criar um programa em JavaScript, que informe a quantidade total de calorias de uma refeição a partir do usuário que deverá informar o prato, a sobremesa e a bebida (veja a tabela a seguir).  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <h1>Exercício 01</h1>
+    <p>Criar um programa em JavaScript, que informe a quantidade total de calorias de uma refeição a partir do usuário que deverá informar o prato, a sobremesa e a bebida (veja a tabela a seguir).</p>
+    <img src="imagens/exercicio01.png" width="600px" alt="Tabela do menu e calorias">
+    <hr>
+
+    <script>
+        let n_prato = parseInt(prompt("Menu de pratos:\nOpção 1: Vegetariano - 180 cal\nOpção 2: Peixe - 230 cal\nOpção 3: Frango - 250 cal\nOpção 4: Carne - 350 cal\n\nDigite apenas O NÚMERO da opção escolhida:"))
+        let n_sobremesa = parseInt(prompt("Menu de sobremesas:\nOpção 1: Abacaxi - 75 cal\nOpção 2: Sorvete diet - 110 cal\nOpção 3: Mouse diet - 170 cal\nOpção 4: Mouse chocolate - 200 cal\n\nDigite apenas O NÚMERO da opção escolhida:"))
+        let n_bebida = parseInt(prompt("Menu de bebidas:\nOpção 1: Chá - 20 cal\nOpção 2: Suco de laranja - 70 cal\nOpção 3: Suco de melão - 100 cal\nOpção 4: Refrigerante diet - 65 cal\n\nDigite apenas O NÚMERO da opção escolhida:"))
+
+
+        let prato
+        let calorias_prato
+        if ((n_prato >=1 && n_prato <=4) && (n_sobremesa >=1 && n_sobremesa <=4) && (n_bebida >=1 && n_bebida <=4)){
+            switch(n_prato){
+                case 1:
+                    prato = "Vegetariano"    
+                    calorias_prato = 180
+                    break
+                case 2:
+                    prato = "Peixe"    
+                    calorias_prato = 230
+                    break
+                case 3:
+                    prato = "Frango"    
+                    calorias_prato = 250
+                    break
+                case 4:
+                    prato = "Carne"    
+                    calorias_prato = 350
+                    break
+            }
+
+            let sobremesa
+            let calorias_sobremesa
+            switch(n_sobremesa){
+                case 1:
+                    sobremesa = "Abacaxi"    
+                    calorias_sobremesa = 75
+                    break
+                case 2:
+                    sobremesa = "Sorvete diet"    
+                    calorias_sobremesa = 110
+                    break
+                case 3:
+                    sobremesa = "Mouse diet"    
+                    calorias_sobremesa = 170
+                    break
+                case 4:
+                    sobremesa = "Mouse chocolate"    
+                    calorias_sobremesa = 200
+                    break
+            }
+
+            let bebida
+            let calorias_bebida
+            switch(n_sobremesa){
+                case 1:
+                    bebida = "Chá"    
+                    calorias_bebida = 75
+                    break
+                case 2:
+                    bebida = "Suco de laranja"    
+                    calorias_bebida = 70
+                    break
+                case 3:
+                    bebida = "Suco de melão"    
+                    calorias_bebida = 100
+                    break
+                case 4:
+                    bebida = "Refrigerante diet"    
+                    calorias_bebida = 65
+                    break
+            }
+
+            let total_calorias = calorias_prato + calorias_sobremesa + calorias_bebida
+            document.write("O total de calorias dessa refeição é " + total_calorias + " cal. <br> Sendo: " + "<ul>" + "<li>Prato: " + prato + " - " + calorias_prato + " cal</li>" +  "<li>Sobremesa: "  + sobremesa + " - " + calorias_sobremesa + " cal</li>" + "<li>Bebida: " + bebida + " - " + calorias_bebida + " cal</li></ul>")
+    } else {
+        alert("Erro! Atualize a página e digite os valores corretamente.")
+    }
+    </script>
+    
+</body>
+</html>

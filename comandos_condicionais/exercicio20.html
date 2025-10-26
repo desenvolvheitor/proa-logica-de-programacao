@@ -1,0 +1,42 @@
+<!-- Escreva um programa que leia 20 números do usuário e exiba quantos números são maiores do que 8. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <h1>Exercício 20</h1>
+    <p>Escreva um programa que leia 20 números do usuário e exiba quantos números são maiores do que 8.</p>
+    <hr>
+
+    <script>
+        let numeros = []
+        let maiores = []
+        let n
+
+        for (let i=1;i<=20;i++) {
+            n = parseInt(prompt("Digite o " + i + "º número inteiro:"))
+            numeros.push(n)
+        }
+
+        for(let i=0;i<20;i++) {
+            if (numeros[i]>8){
+                maiores.push(numeros[i])
+            }
+        }
+
+        let quant_maiores = maiores.length
+        document.write("Dos 20, " + quant_maiores + " números são maiores que 8.<br>São eles:<ul>")
+
+        for (let i=0;i<quant_maiores;i++){
+            document.write("<li>" + maiores[i] + "</li>")
+        }
+
+        document.write("</ul>")
+
+    </script>
+</body>
+</html>
