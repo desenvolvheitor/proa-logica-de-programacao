@@ -13,18 +13,22 @@
     <hr>
 
     <script>
-        let n = 0
+        let n = 1
         let soma = 0
+        let soma_anterior = 0
         
-        while (n<100){
-            n++
-            if (soma!=0){
-                document.write(soma + "+" + n + "<br>")
+        while (n <= 100){
+            if (n==1){
+                soma += n
+            } else {
+                soma_anterior = soma
+                soma += n
+                document.write(soma_anterior + " + " + n + " = " + soma + "<br>")
             }
-            soma += n
+            n++
         }
 
-        document.write(soma)
+        document.write("<br><hr><br>" + "A soma dos números de 1 a 100 é igual a <strong>" + soma + "</strong>")
     </script>
     
 </body>
