@@ -1,0 +1,35 @@
+<!-- Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 38</title>
+</head>
+<body>
+    <h1>Exercício 38</h1>
+    <p>Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido.</p>
+    <hr>
+
+    <script>
+        let n = parseInt(prompt("Digite um número inteiro:"))
+
+        let numero_anterior = 0
+        let proximo_numero
+
+        document.write("<h2>Sequência de Fibonacci até " + n + ":</h2>")
+
+        if (n >= 0) {
+            document.write(numero_anterior + "<br>")
+        }
+
+        for (let numero_atual=1; numero_atual<=n; numero_atual++){
+            document.write(numero_atual + "<br>")
+            proximo_numero = numero_anterior + numero_atual
+            numero_anterior = numero_atual
+            numero_atual = proximo_numero
+        }
+    </script>
+</body>
+</html>
