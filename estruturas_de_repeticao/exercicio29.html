@@ -1,0 +1,28 @@
+<!-- Escreva um programa que calcule o fatorial de um número inteiro inserido pelo usuário usando o loop "do-while". -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 29</title>
+</head>
+<body>
+    <h1>Exercício 29</h1>
+    <p>Escreva um programa que calcule o fatorial de um número inteiro inserido pelo usuário usando o loop "do-while".</p>
+    <hr>
+
+    <script>
+        let n = parseInt(prompt("Digite um número inteiro:"))
+        let produto_fatorial = 1
+
+        let i = 1
+        do{
+            produto_fatorial *= i
+            i++
+        } while (i<=n)
+
+        document.write(n + "! = " + produto_fatorial)
+    </script>
+</body>
+</html>

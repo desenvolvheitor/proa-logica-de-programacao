@@ -1,15 +1,15 @@
-<!-- Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "while". -->
+<!-- Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "do-while". -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 07</title>
+    <title>Exercício 22</title>
 </head>
 <body>
-    <h1>Exercício 07</h1>
-    <p>Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "while".</p>
+    <h1>Exercício 22</h1>
+    <p>Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "do-while".</p>
     <hr>
 
     <script>
@@ -18,12 +18,12 @@
         let teste_divisor = 2
         let divisores = 0
 
-        while (teste_divisor <= n){
+        do {
             if (n % teste_divisor == 0){
-                divisores++
+                 divisores++
             }
             teste_divisor++
-        }
+        } while (teste_divisor <= n)
 
         if (divisores > 1) {
             document.write(n + " <strong>não</strong> é um número primo.")
